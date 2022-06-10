@@ -93,7 +93,7 @@ namespace BuscadoDesktop
         private void button1_Click_1(object sender, EventArgs e)
         {
             FormCriarSetor cs = new FormCriarSetor(idMercado, idProduto, nome, codigo);
-            Close();
+            Hide();
             cs.ShowDialog();
         }
 

@@ -47,7 +47,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbConfirmarSenha = new System.Windows.Forms.TextBox();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
-            this.cbModoTouchscreen = new System.Windows.Forms.CheckBox();
             this.labelMercado = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -129,7 +128,7 @@
             this.comboBoxOferta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxOferta.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
             this.comboBoxOferta.FormattingEnabled = true;
-            this.comboBoxOferta.Location = new System.Drawing.Point(19, 256);
+            this.comboBoxOferta.Location = new System.Drawing.Point(19, 231);
             this.comboBoxOferta.Name = "comboBoxOferta";
             this.comboBoxOferta.Size = new System.Drawing.Size(212, 33);
             this.comboBoxOferta.TabIndex = 7;
@@ -140,7 +139,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 228);
+            this.label4.Location = new System.Drawing.Point(14, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 25);
             this.label4.TabIndex = 8;
@@ -152,7 +151,7 @@
             this.btEditarOferta.FlatAppearance.BorderSize = 0;
             this.btEditarOferta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditarOferta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.btEditarOferta.Location = new System.Drawing.Point(19, 295);
+            this.btEditarOferta.Location = new System.Drawing.Point(19, 270);
             this.btEditarOferta.Name = "btEditarOferta";
             this.btEditarOferta.Size = new System.Drawing.Size(101, 26);
             this.btEditarOferta.TabIndex = 9;
@@ -166,7 +165,7 @@
             this.btCriarOferta.FlatAppearance.BorderSize = 0;
             this.btCriarOferta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCriarOferta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.btCriarOferta.Location = new System.Drawing.Point(237, 256);
+            this.btCriarOferta.Location = new System.Drawing.Point(237, 231);
             this.btCriarOferta.Name = "btCriarOferta";
             this.btCriarOferta.Size = new System.Drawing.Size(82, 33);
             this.btCriarOferta.TabIndex = 10;
@@ -275,26 +274,13 @@
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
             // 
-            // cbModoTouchscreen
-            // 
-            this.cbModoTouchscreen.AutoSize = true;
-            this.cbModoTouchscreen.BackColor = System.Drawing.Color.Transparent;
-            this.cbModoTouchscreen.Font = new System.Drawing.Font("Microsoft YaHei", 10.25F);
-            this.cbModoTouchscreen.ForeColor = System.Drawing.Color.White;
-            this.cbModoTouchscreen.Location = new System.Drawing.Point(19, 202);
-            this.cbModoTouchscreen.Name = "cbModoTouchscreen";
-            this.cbModoTouchscreen.Size = new System.Drawing.Size(255, 24);
-            this.cbModoTouchscreen.TabIndex = 20;
-            this.cbModoTouchscreen.Text = "Modo touchscreen - em progesso";
-            this.cbModoTouchscreen.UseVisualStyleBackColor = false;
-            // 
             // labelMercado
             // 
             this.labelMercado.AutoSize = true;
             this.labelMercado.BackColor = System.Drawing.Color.Transparent;
             this.labelMercado.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.labelMercado.ForeColor = System.Drawing.Color.White;
-            this.labelMercado.Location = new System.Drawing.Point(61, 560);
+            this.labelMercado.Location = new System.Drawing.Point(67, 539);
             this.labelMercado.Name = "labelMercado";
             this.labelMercado.Size = new System.Drawing.Size(82, 25);
             this.labelMercado.TabIndex = 21;
@@ -311,7 +297,7 @@
             this.groupBox1.Controls.Add(this.btEditarProduto);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.1F);
-            this.groupBox1.Location = new System.Drawing.Point(13, 448);
+            this.groupBox1.Location = new System.Drawing.Point(19, 427);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(300, 105);
             this.groupBox1.TabIndex = 22;
@@ -337,7 +323,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 420);
+            this.label3.Location = new System.Drawing.Point(20, 399);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 23;
@@ -350,7 +336,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.button1.Location = new System.Drawing.Point(13, 559);
+            this.button1.Location = new System.Drawing.Point(19, 538);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(42, 26);
             this.button1.TabIndex = 24;
@@ -364,7 +350,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.button3.Location = new System.Drawing.Point(126, 295);
+            this.button3.Location = new System.Drawing.Point(126, 270);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(105, 26);
             this.button3.TabIndex = 25;
@@ -392,7 +378,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.button5.Location = new System.Drawing.Point(126, 391);
+            this.button5.Location = new System.Drawing.Point(126, 366);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(105, 26);
             this.button5.TabIndex = 31;
@@ -406,7 +392,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.button6.Location = new System.Drawing.Point(237, 352);
+            this.button6.Location = new System.Drawing.Point(237, 327);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(82, 33);
             this.button6.TabIndex = 30;
@@ -420,7 +406,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.button7.Location = new System.Drawing.Point(19, 391);
+            this.button7.Location = new System.Drawing.Point(19, 366);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(101, 26);
             this.button7.TabIndex = 29;
@@ -434,7 +420,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 14F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(14, 324);
+            this.label9.Location = new System.Drawing.Point(14, 299);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 25);
             this.label9.TabIndex = 28;
@@ -445,7 +431,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 352);
+            this.comboBox1.Location = new System.Drawing.Point(19, 327);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(212, 33);
             this.comboBox1.TabIndex = 27;
@@ -455,7 +441,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BuscadoDesktop.Properties.Resources.photo_1588421357574_87938a86fa28;
-            this.ClientSize = new System.Drawing.Size(338, 600);
+            this.ClientSize = new System.Drawing.Size(338, 583);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
@@ -467,7 +453,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelMercado);
-            this.Controls.Add(this.cbModoTouchscreen);
             this.Controls.Add(this.tbConfirmarSenha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -513,7 +498,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbConfirmarSenha;
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
-        private System.Windows.Forms.CheckBox cbModoTouchscreen;
         private System.Windows.Forms.Label labelMercado;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;

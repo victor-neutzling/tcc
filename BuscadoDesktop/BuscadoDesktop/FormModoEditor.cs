@@ -52,17 +52,20 @@ namespace BuscadoDesktop
                              join Oferta in context.Oferta on Mercado_has_Produto.idMercado_has_Produto equals Oferta.idMercado_has_Produto
                              where Mercado_has_Produto.idMercado == idMercado
                              select Oferta.Descricao;
-                BindingSource bs = new BindingSource();
-                bs.DataSource = query2.ToList();
-                comboBoxOferta.DataSource = bs;
+                foreach (var item in query2.ToList())
+                {
+                    comboBoxOferta.Items.Add(item);
+                }
                 var query3 = from Mercado_has_Produto in context.Mercado_has_Produto
                              join Mercado in context.Mercado on Mercado_has_Produto.idMercado equals Mercado.idMercado
-                             join Setor in context.Setor on Mercado.idMercado equals Setor.idMercado
-                             where Mercado_has_Produto.idMercado == idMercado
+                             join Mercado_has_Produto_has_Setor in context.Mercado_has_Produto_has_Setor on Mercado_has_Produto.idMercado_has_Produto equals Mercado_has_Produto_has_Setor.idMercado_has_Produto
+                             join Setor in context.Setor on Mercado_has_Produto_has_Setor.idSetor equals Setor.idSetor
                              select Setor.Nome;
-                BindingSource bs2 = new BindingSource();
-                bs2.DataSource = query3.ToList();
-                comboBox1.DataSource = bs2;
+                foreach(var item in query3.ToList())
+                {
+                    comboBox1.Items.Add(item);
+                }
+                
 
             }
         }
@@ -295,6 +298,17 @@ namespace BuscadoDesktop
                 var query = from Setor in context.Setor
                             where Setor.Nome == comboBox1.Text
                             select Setor.idSetor;
+
+                var query2 = from Mercado_has_Produto_has_Setor in context.Mercado_has_Produto_has_Setor
+                             where Mercado_has_Produto_has_Setor.idSetor == query.FirstOrDefault()
+                             select Mercado_has_Produto_has_Setor.idMercado_has_Produto_has_Setor;
+
+                Mercado_has_Produto_has_Setor ss = new Mercado_has_Produto_has_Setor() { idMercado_has_Produto_has_Setor = query2.FirstOrDefault() };
+                context.Mercado_has_Produto_has_Setor.Attach(ss);
+                context.Mercado_has_Produto_has_Setor.Remove(ss);
+                context.SaveChanges();
+
+
                 Setor s = new Setor() { idSetor = query.FirstOrDefault() };
                 context.Setor.Attach(s);
                 context.Setor.Remove(s);

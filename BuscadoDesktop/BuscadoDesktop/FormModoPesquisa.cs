@@ -74,6 +74,17 @@ namespace BuscadoDesktop
                             select Produto.Imagem;
                 imagemProdutos = query.ToList();
             }
+            using (var context = new BuscadoEntities())
+            {
+                var query = from Mercado_has_Produto in context.Mercado_has_Produto
+                            join Produto in context.Produto on Mercado_has_Produto.idProduto equals Produto.idProduto
+                            join Mercado_has_Produto_has_Setor in context.Mercado_has_Produto_has_Setor on Mercado_has_Produto.idMercado_has_Produto equals Mercado_has_Produto_has_Setor.idMercado_has_Produto
+                            join setor in context.Setor on Mercado_has_Produto_has_Setor.idSetor equals setor.idSetor
+                            where idMercado == Mercado_has_Produto.idMercado
+                            where Produto.Nome.Contains(tbBusca.Text)
+                            select setor.Nome;
+                setorProdutos = query.ToList();
+            }
             populateItems();
         }
         private void populateItems()
@@ -83,7 +94,7 @@ namespace BuscadoDesktop
             for(int i = 0;i < listaProdutos.Length; i++) { 
                 listaProdutos[i] = new ListaProduto();
                 listaProdutos[i].NomeProduto = nomeProdutos[i]; //pegar do banco
-                listaProdutos[i].Setor = "pendente";
+                listaProdutos[i].Setor = setorProdutos[i];
                 listaProdutos[i].Corredor = corredorProdutos[i];
                 listaProdutos[i].Preco = precoProdutos[i].ToString();
                 listaProdutos[i].Thumbnail = imagemProdutos[i];
@@ -91,7 +102,8 @@ namespace BuscadoDesktop
                 //{
                 //    flowLayoutPanel1.Controls.Clear();
                 //}
-                //else
+                //else0,
+
                 
                     flowLayoutPanel1.Controls.Add(listaProdutos[i]);
                 
